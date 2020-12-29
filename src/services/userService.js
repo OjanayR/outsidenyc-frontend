@@ -20,7 +20,7 @@ function login(credentials) {
     header: {
       'Content-Type': 'Application/json'
     },
-    body.JSON.stringify(credentials)
+    body: JSON.stringify(credentials)
   }).then(response => {
     if(response.ok) return response.json();
     throw new Error('Bad Credentials');
